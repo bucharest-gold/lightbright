@@ -1,0 +1,33 @@
+{
+  "name": "lightbright",
+  "version": "0.0.1",
+  "description": "A lightweight module for code tracing using async-wrap",
+  "main": "index.js",
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js | tap-spec",
+    "lint": "eslint .",
+    "format": "semistandard",
+    "prepublish": "nsp check"
+  },
+  "keywords": [
+    "AsyncWrap",
+    "async-wrap",
+    "trace",
+    "tracing"
+  ],
+  "author": "Lance Ball <lanceball@gmail.com> (http://lanceball.com)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async-hook": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "nsp": "^2.4.0",
+    "semistandard": "^8.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}
