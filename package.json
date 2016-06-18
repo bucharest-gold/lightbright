@@ -27,5 +27,10 @@
     "eslint": "^2.12.0",
     "nsp": "^2.4.0",
     "semistandard": "^8.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bucharest-gold/lightbright.git"
+  },
+  "bugs": "https://github.com/bucharest-gold/lightbright/issues"
 }
