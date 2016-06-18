@@ -22,9 +22,10 @@ events. E.g.
     }
 
 Add a filter using the `addFilter` function.
+**Note:** Do _not_ execute asyncronous code from within a filter function.
 
     const lightbright = require('lightbright');
-    lightbright.addFilter((obj) => console.log(obj));
+    lightbright.addFilter((obj) => fs.writeSync(1, obj.toString()));
 
 And then activate it.
 
@@ -33,7 +34,7 @@ And then activate it.
 You can deactivate and remove all filters using the `deactivate`
 function.
 
-    lightbright.deactivate(myFilter);
+    lightbright.deactivate();
 
 To remove a single filter, use the `removeFilter` function.
 
