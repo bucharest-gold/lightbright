@@ -1,26 +1,23 @@
 const lightbright = require('../index.js');
-const test = require('tape');
+const assert = require('assert');
 const fs = require('fs');
 
-test('Disabling lightbright should deactivate filters', (t) => {
-  let called = 0;
-  const didCall = () => (called += 1);
+let called = 0;
+let expected = 0;
+let accessCalled = true;
+const didCall = () => (called += 1);
 
-  lightbright.addFilter(didCall);
-  lightbright.activate();
+lightbright.addFilter(didCall);
+lightbright.activate();
 
-  fs.readFile('./fixture.txt', () => {
-    // TODO: Is this a bug? Here? In async-wrap?
-    // I think this is a bit ugly, but once a set of hooks has been
-    // put into action, they will complete, even if deactivate() has
-    // been called. Add 2 to the expected count - one for this callback
-    // function, and one for the outermost fs.readFile.
-    const expected = called + 2;
-    t.ok(called > 1, 'Filter was called');
-    lightbright.deactivate();
-    fs.readFile('./fixture.txt', () => {
-      t.equal(called, expected, 'Filter was not called');
-      t.end();
-    });
-  });
+fs.access(__filename, () => {
+  assert.equal(called, 2, 'Expected init and pre hooks to have been called');
+  expected = called;
+  lightbright.deactivate();
+  fs.readFile('./fixture.txt', () => (accessCalled = true));
+});
+
+process.once('exit', () => {
+  assert.equal(accessCalled, true, 'Callback not called');
+  assert.equal(called, expected, 'Async hooks called unexpectedly');
 });

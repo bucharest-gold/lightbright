@@ -1,12 +1,14 @@
 const lightbright = require('../index.js');
-const test = require('tape');
+const assert = require('assert');
 const fs = require('fs');
 
-test('Tracing should be off by default', (t) => {
-  let uncalled = true;
-  lightbright.addFilter(() => (uncalled = false));
-  fs.readFile('./fixture.txt', () => {
-    t.ok(uncalled, 'Filter was not called.');
-    t.end();
-  });
+let uncalled = true;
+let accessCalled = false;
+
+lightbright.addFilter(() => (uncalled = false));
+fs.access(__filename, () => (accessCalled = true));
+
+process.once('exit', () => {
+  assert.equal(uncalled, true, 'Filter should not be called');
+  assert.equal(accessCalled, true, 'Callback should be executed');
 });

@@ -1,4 +1,5 @@
 module.exports = {
+    "ecmaVersion": 6,
     "env": {
         "browser": true,
         "node": true,
@@ -6,6 +7,8 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "rules": {
+        "esversion": 0,
+        "no-console": 0,
         "indent": [
             "error",
             2
