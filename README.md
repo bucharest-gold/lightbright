@@ -1,7 +1,9 @@
 # lightbright
 
 An experimental, lightweight module for code tracing, using
-the still-undocumented `process.binding('async-wrap')`.
+the `process.binding('async-wrap')` API. For more information
+about the API, refer to the existing Node.js
+[documentation](https://github.com/nodejs/diagnostics/blob/master/tracing/AsyncWrap/README.md)
 
 ## Installation
 
