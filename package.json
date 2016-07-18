@@ -7,8 +7,11 @@
     "node": ">=5.0.0"
   },
   "scripts": {
-    "test": "semistandard && eslint . && node test/runner.js",
-    "prepublish": "nsp check"
+    "lint": "eslint .",
+    "format": "semistandard",
+    "test": "node test/runner.js",
+    "prepublish": "nsp check",
+    "ci": "make ci"
   },
   "keywords": [
     "AsyncWrap",
