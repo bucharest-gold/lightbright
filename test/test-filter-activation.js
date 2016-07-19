@@ -6,7 +6,7 @@ let didCall = false;
 let accessCalled = false;
 
 lightbright.addFilter(() => (didCall = true));
-lightbright.activate();
+lightbright.enable();
 fs.access(__filename, () => (accessCalled = true));
 
 process.once('exit', () => {

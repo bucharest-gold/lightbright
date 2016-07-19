@@ -8,12 +8,12 @@ let accessCalled = true;
 const didCall = () => (called += 1);
 
 lightbright.addFilter(didCall);
-lightbright.activate();
+lightbright.enable();
 
 fs.access(__filename, () => {
   assert.equal(called, 2, 'Expected init and pre hooks to have been called');
   expected = called;
-  lightbright.deactivate();
+  lightbright.disable();
   fs.readFile('./fixture.txt', () => (accessCalled = true));
 });
 

@@ -8,7 +8,7 @@ let accessTwoCalled = false;
 const didCall = () => (called += 1);
 
 lightbright.addFilter(didCall);
-lightbright.activate();
+lightbright.enable();
 
 fs.access(__filename, () => {
   const expected = called;
@@ -16,14 +16,14 @@ fs.access(__filename, () => {
   assert.equal(called, 2, 'Expect init and pre hooks to have been called');
 
   // deactivate hooks
-  lightbright.deactivate();
+  lightbright.disable();
   fs.access(__filename, () => {
     // hooks called should not be changed
     assert.equal(called, expected, 'Filter should not be called');
 
     // reactivate hooks
     lightbright.addFilter(didCall);
-    lightbright.activate();
+    lightbright.enable();
 
     fs.access(__filename, () => (accessTwoCalled = true));
   });
