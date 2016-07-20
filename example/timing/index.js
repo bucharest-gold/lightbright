@@ -1,19 +1,16 @@
 const http = require('http');
 const util = require('util');
 const fs = require('fs');
-const lightbright = require('../../');
-const timing = lightbright.builtins.timing;
+const LightBright = require('../../');
+const Timing = LightBright.builtins.timing;
 
-lightbright.addFilter(timing.timer);
-lightbright.enable();
+LightBright.addFilter(Timing.timer);
+LightBright.enable();
 
 const server = http.createServer((request, response) => {
-  let reply = 'Accumulated data:\n';
-
   // do some other async activity
   fs.readFile(__filename, () => {
-    reply += util.format(timing.timings());
-    response.end('OK ' + reply);
+    response.end(util.format(Timing.timings()));
   });
 });
 
