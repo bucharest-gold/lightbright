@@ -1,3 +1,8 @@
 'use strict';
 
-module.exports = exports = require('./lib/trace_hooks.js');
+const LightBright = require('./lib/trace_hooks');
+LightBright.builtins = {
+  timing: require('./lib/filters/timing')
+};
+
+module.exports = exports = LightBright;
