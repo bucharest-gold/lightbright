@@ -1,6 +1,6 @@
 {
   "name": "lightbright",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight module for code tracing using async-wrap",
   "main": "index.js",
   "engines": {
