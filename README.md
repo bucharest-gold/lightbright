@@ -1,5 +1,7 @@
 # lightbright
 
+[![Coverage Status](https://coveralls.io/repos/github/bucharest-gold/lightbright/badge.svg?branch=master)](https://coveralls.io/github/bucharest-gold/lightbright?branch=master)
+
 An experimental, lightweight module for code tracing, using
 the `process.binding('async-wrap')` API. For more information
 about the API, refer to the existing Node.js
