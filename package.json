@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "node test/runner.js",
+    "test": "istanbul cover test/runner.js",
     "prepublish": "nsp check",
     "ci": "make ci"
   },
@@ -29,6 +29,7 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-react": "^6.1.2",
     "eslint-plugin-standard": "^2.0.0",
+    "istanbul": "^0.4.5",
     "nsp": "^2.4.0"
   },
   "repository": {
