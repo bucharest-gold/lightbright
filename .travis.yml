@@ -13,3 +13,5 @@ branches:
   - master
 after_success:
  - cat ./coverage/lcov.info | coveralls
+notifications:
+  irc: "irc.freenode.org#brass-monkey"
