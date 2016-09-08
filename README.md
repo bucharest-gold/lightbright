@@ -1,15 +1,25 @@
 # lightbright
 
 [![Coverage Status](https://coveralls.io/repos/github/bucharest-gold/lightbright/badge.svg?branch=master)](https://coveralls.io/github/bucharest-gold/lightbright?branch=master)
+[![Build Status](https://travis-ci.org/bucharest-gold/lightbright.svg?branch=master)](https://travis-ci.org/bucharest-gold/lightbright)
+[![dependencies Status](https://david-dm.org/bucharest-gold/lightbright/status.svg)](https://david-dm.org/bucharest-gold/lightbright)
 
 An experimental, lightweight module for code tracing, using
 the `process.binding('async-wrap')` API. For more information
 about the API, refer to the existing Node.js
 [documentation](https://github.com/nodejs/diagnostics/blob/master/tracing/AsyncWrap/README.md)
 
+|                 | Project Info  |
+| --------------- | ------------- |
+| License:        | Apache-2.0 |
+| Build:          | make |
+| Documentation:  | N/A |
+| Issue tracker:  | https://github.com/bucharest-gold/lightbright/issues |
+| Engines:        | Node.js 5.x, 6.x |
+
 ## Installation
 
-    $ npm install --save lightbright
+    $ npm install lightbright -S
 
 ## Usage
 
@@ -219,3 +229,7 @@ Ouput of this filter for an HTTP request might look something like this.
 
 This is a work in progress. Don't expect it to remain stable for
 for any amount of time in the near future.
+
+## Contributing
+
+Please read the [contributing guide](./CONTRIBUTING.md)
