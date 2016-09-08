@@ -2,7 +2,10 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/bucharest-gold/lightbright/badge.svg?branch=master)](https://coveralls.io/github/bucharest-gold/lightbright?branch=master)
 [![Build Status](https://travis-ci.org/bucharest-gold/lightbright.svg?branch=master)](https://travis-ci.org/bucharest-gold/lightbright)
+[![Known Vulnerabilities](https://snyk.io/test/npm/lightbright/badge.svg)](https://snyk.io/test/npm/lightbright)
 [![dependencies Status](https://david-dm.org/bucharest-gold/lightbright/status.svg)](https://david-dm.org/bucharest-gold/lightbright)
+
+[![NPM](https://nodei.co/npm/lightbright.png)](https://npmjs.org/package/lightbright)
 
 An experimental, lightweight module for code tracing, using
 the `process.binding('async-wrap')` API. For more information
