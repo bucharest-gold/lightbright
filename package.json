@@ -7,7 +7,7 @@
     "node": ">=5.0.0"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint lib/*.js test/*.js index.js",
     "test": "istanbul cover test/runner.js",
     "prepublish": "nsp check",
     "ci": "make ci"
