@@ -30,7 +30,8 @@
     "eslint-plugin-react": "^6.1.2",
     "eslint-plugin-standard": "^2.0.0",
     "istanbul": "^0.4.5",
-    "nsp": "^2.4.0"
+    "nsp": "^2.4.0",
+    "standard-version": "~3.0.0"
   },
   "repository": {
     "type": "git",
