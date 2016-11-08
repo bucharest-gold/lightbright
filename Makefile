@@ -1,10 +1,10 @@
 ci: test
 
 test: lint
-	npm test
+	npm $@
 
-lint: node_modules
-	npm run lint
+lint:
+	npm run $@
 
 clean:
 	rm -rf node_modules
@@ -12,4 +12,4 @@ clean:
 node_modules: package.json
 	npm install
 
-.PHONY: node_modules
+.PHONY: clean
