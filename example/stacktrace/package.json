@@ -1,0 +1,30 @@
+{
+  "name": "stacktrace",
+  "version": "0.0.1",
+  "main": false,
+  "author": "Red Hat, Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bucharest-gold/lightbright.git"
+  },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/bucharest-gold/lightbright/issues"
+  },
+  "homepage": "https://github.com/bucharest-gold/lightbright/examples/stacktrace",
+  "description": "Example app showing usage of the LightBright.builtins.stacktrace filter",
+  "keywords": [
+    "trace",
+    "stack",
+    "stacktrace",
+    "async"
+  ],
+  "dependencies": {
+    "clarify": "~2.0.0"
+  }
+}

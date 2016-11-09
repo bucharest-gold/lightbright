@@ -1,6 +1,6 @@
 ci: test
 
-test: lint
+test: node_modules lint
 	npm $@
 
 lint:

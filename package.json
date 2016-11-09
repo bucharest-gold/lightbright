@@ -37,5 +37,8 @@
     "type": "git",
     "url": "https://github.com/bucharest-gold/lightbright.git"
   },
-  "bugs": "https://github.com/bucharest-gold/lightbright/issues"
+  "bugs": "https://github.com/bucharest-gold/lightbright/issues",
+  "dependencies": {
+    "stack-chain": "~1.3.7"
+  }
 }
