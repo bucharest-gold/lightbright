@@ -8,6 +8,8 @@ before_script:
   - npm install -g coveralls
 script:
    - make ci
+   - npm run benchmark
+   - npm run benchmark2
 branches:
   only:
   - master
