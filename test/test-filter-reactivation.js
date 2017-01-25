@@ -7,6 +7,10 @@ const fs = require('fs');
 let called = 0;
 let accessOneCalled = false;
 let accessTwoCalled = false;
+
+const majorVersion = parseInt(process.version.substr(1, 1));
+const expectedTotal = majorVersion < 7 ? 6 : 5;
+
 const didCall = () => (called += 1);
 
 lightbright.addFilter(didCall);
@@ -34,5 +38,5 @@ fs.access(__filename, () => {
 process.once('exit', () => {
   assert.equal(accessOneCalled, true, 'Callback one not called');
   assert.equal(accessTwoCalled, true, 'Callback two not called');
-  assert.equal(called, 6, 'Async hooks called unexpectedly: ' + called);
+  assert.equal(called, expectedTotal, 'Async hooks called unexpectedly: ' + called);
 });
