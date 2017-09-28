@@ -17,4 +17,4 @@ branches:
 after_success:
  - cat ./coverage/lcov.info | coveralls
 notifications:
-  irc: "irc.freenode.org#brass-monkey"
+  irc: "irc.freenode.org#bucharest-gold"
